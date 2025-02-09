@@ -3,156 +3,294 @@
 <head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1" name="viewport">
-<title>Mirror of Three</title>
+<title>Town of Lillies</title>
 <style title="Twine CSS">@keyframes appear{0%{opacity:0}to{opacity:1}}@keyframes fade-in-out{0%,to{opacity:0}50%{opacity:1}}@keyframes rumble{25%{top:-0.1em}75%{top:.1em}0%,to{top:0px}}@keyframes shudder{25%{left:.1em}75%{left:-0.1em}0%,to{left:0px}}@keyframes buoy{25%{top:.25em}75%{top:-0.25em}0%,to{top:0px}}@keyframes sway{25%{left:.25em}75%{left:-0.25em}0%,to{left:0px}}@keyframes pulse{0%{transform:scale(0, 0)}20%{transform:scale(1.2, 1.2)}40%{transform:scale(0.9, 0.9)}60%{transform:scale(1.05, 1.05)}80%{transform:scale(0.925, 0.925)}to{transform:scale(1, 1)}}@keyframes zoom-in{0%{transform:scale(0, 0)}to{transform:scale(1, 1)}}@keyframes shudder-in{0%,to{transform:translateX(0em)}5%,25%,45%{transform:translateX(-1em)}15%,35%,55%{transform:translateX(1em)}65%{transform:translateX(-0.6em)}75%{transform:translateX(0.6em)}85%{transform:translateX(-0.2em)}95%{transform:translateX(0.2em)}}@keyframes rumble-in{0%,to{transform:translateY(0em)}5%,25%,45%{transform:translateY(-1em)}15%,35%,55%{transform:translateY(1em)}65%{transform:translateY(-0.6em)}75%{transform:translateY(0.6em)}85%{transform:translateY(-0.2em)}95%{transform:translateY(0.2em)}}@keyframes fidget{0%,8.1%,82.1%,31.1%,38.1%,44.1%,40.1%,47.1%,74.1%,16.1%,27.1%,72.1%,24.1%,95.1%,6.1%,36.1%,20.1%,4.1%,91.1%,14.1%,87.1%,to{left:0px;top:0px}8%,82%,31%,38%,44%{left:-1px}40%,47%,74%,16%,27%{left:1px}72%,24%,95%,6%,36%{top:-1px}20%,4%,91%,14%,87%{top:1px}}@keyframes slide-right{0%{transform:translateX(-100vw)}}@keyframes slide-left{0%{transform:translateX(100vw)}}@keyframes slide-up{0%{transform:translateY(100vh)}}@keyframes slide-down{0%{transform:translateY(-100vh)}}@keyframes fade-right{0%{opacity:0;transform:translateX(-1em)}to{opacity:1}}@keyframes fade-left{0%{opacity:0;transform:translateX(1em)}to{opacity:1}}@keyframes fade-up{0%{opacity:0;transform:translateY(1em)}to{opacity:1}}@keyframes fade-down{0%{opacity:0;transform:translateY(-1em)}to{opacity:1}}@keyframes flicker{0%,29%,31%,63%,65%,77%,79%,86%,88%,91%,93%{opacity:0}30%{opacity:.2}64%{opacity:.4}78%{opacity:.6}87%{opacity:.8}92%,to{opacity:1}}@keyframes blur{0%{filter:blur(2rem);opacity:0}25%{opacity:1}to{filter:blur(0rem);opacity:1}}.dom-debug-mode tw-story,.dom-debug-mode tw-passage,.dom-debug-mode tw-sidebar,.dom-debug-mode tw-include,.dom-debug-mode tw-hook,.dom-debug-mode tw-expression,.dom-debug-mode tw-link,.dom-debug-mode tw-dialog,.dom-debug-mode tw-columns,.dom-debug-mode tw-column,.dom-debug-mode tw-align{outline:1px solid #f5a3da;min-height:32px;display:block !important}.dom-debug-mode tw-story::before,.dom-debug-mode tw-passage::before,.dom-debug-mode tw-sidebar::before,.dom-debug-mode tw-include::before,.dom-debug-mode tw-hook::before,.dom-debug-mode tw-expression::before,.dom-debug-mode tw-link::before,.dom-debug-mode tw-dialog::before,.dom-debug-mode tw-columns::before,.dom-debug-mode tw-column::before,.dom-debug-mode tw-align::before{position:absolute;top:0;left:0;height:16px;background-color:#f5a3da;color:#000;font-size:16px;font-weight:normal;font-style:normal;font-family:monospace;display:inline-block;line-height:100%;white-space:pre;z-index:999997}.dom-debug-mode tw-story:hover,.dom-debug-mode tw-passage:hover,.dom-debug-mode tw-sidebar:hover,.dom-debug-mode tw-include:hover,.dom-debug-mode tw-hook:hover,.dom-debug-mode tw-expression:hover,.dom-debug-mode tw-link:hover,.dom-debug-mode tw-dialog:hover,.dom-debug-mode tw-columns:hover,.dom-debug-mode tw-column:hover,.dom-debug-mode tw-align:hover{outline:1px solid #fc9}.dom-debug-mode tw-story:hover::before,.dom-debug-mode tw-passage:hover::before,.dom-debug-mode tw-sidebar:hover::before,.dom-debug-mode tw-include:hover::before,.dom-debug-mode tw-hook:hover::before,.dom-debug-mode tw-expression:hover::before,.dom-debug-mode tw-link:hover::before,.dom-debug-mode tw-dialog:hover::before,.dom-debug-mode tw-columns:hover::before,.dom-debug-mode tw-column:hover::before,.dom-debug-mode tw-align:hover::before{background-color:#fc9;transition:background-color 1s}.dom-debug-mode tw-passage,.dom-debug-mode tw-include,.dom-debug-mode tw-hook,.dom-debug-mode tw-expression,.dom-debug-mode tw-link,.dom-debug-mode tw-dialog,.dom-debug-mode tw-columns,.dom-debug-mode tw-column,.dom-debug-mode tw-align{padding:1em;margin:0}.dom-debug-mode tw-story::before{content:'<tw-story tags="' attr(tags) '">'}.dom-debug-mode tw-passage::before{top:-16px;content:'<tw-passage tags="' attr(tags) '">'}.dom-debug-mode tw-sidebar::before{top:-16px;content:"<tw-sidebar>"}.dom-debug-mode tw-hook::before{content:'<tw-hook name="' attr(name) '">'}.dom-debug-mode tw-expression::before{content:'<tw-expression name="' attr(name) '">'}.dom-debug-mode tw-link::before{content:'<tw-link name="' attr(name) '">'}.dom-debug-mode tw-dialog::before{content:"<tw-dialog>"}.dom-debug-mode tw-columns::before{content:"<tw-columns>"}.dom-debug-mode tw-column::before{content:"<tw-column>"}.dom-debug-mode tw-align::before{content:"<tw-align>"}.dom-debug-mode tw-include::before{content:'<tw-include type="' attr(type) '" name="' attr(name) '">'}tw-open-button[goto]{display:none}.debug-mode tw-open-button[replay],.debug-mode tw-open-button[goto]{display:inline}.debug-mode tw-expression{display:inline-block !important}.debug-mode tw-expression[type=variable]::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"$" attr(name)}.debug-mode tw-expression[type=tempVariable]::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"_" attr(name)}.debug-mode tw-expression[return=boolean]{background-color:rgba(179,179,179,.2)}.debug-mode tw-expression[return=array]{background-color:rgba(255,102,102,.2)}.debug-mode tw-expression[return=dataset]{background-color:rgba(255,128,0,.2)}.debug-mode tw-expression[return=number]{background-color:rgba(255,179,102,.2)}.debug-mode tw-expression[return=datamap]{background-color:rgba(255,255,102,.2)}.debug-mode tw-expression[return=changer]{background-color:rgba(179,255,102,.2)}.debug-mode tw-expression[return=lambda]{background-color:rgba(102,255,102,.2)}.debug-mode tw-expression[return=hookname]{background-color:rgba(102,255,204,.2)}.debug-mode tw-expression[return=string]{background-color:rgba(102,255,255,.2)}.debug-mode tw-expression[return=datatype]{background-color:rgba(102,153,255,.2)}.debug-mode tw-expression[return=gradient],.debug-mode tw-expression[return=colour]{background-color:rgba(204,102,255,.2)}.debug-mode tw-expression[return=instant],.debug-mode tw-expression[return=macro]{background-color:rgba(240,117,199,.2)}.debug-mode tw-expression[return=command]{background-color:rgba(153,153,255,.2)}.debug-mode tw-expression.false{background-color:rgba(255,0,0,.2) !important}.debug-mode tw-expression[type=macro]::before{content:"(" attr(name) ":)";padding:0 .5rem;font-size:1rem;vertical-align:middle;line-height:normal;background-color:inherit;border:1px solid rgba(255,255,255,.5)}.debug-mode tw-expression[title]:not([title=""]){cursor:help}.debug-mode tw-hook{background-color:rgba(0,85,255,.1) !important}.debug-mode tw-hook::before{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"["}.debug-mode tw-hook::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"]"}.debug-mode tw-hook[name]::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"]<" attr(name) "|"}.debug-mode tw-pseudo-hook{background-color:rgba(255,170,0,.1) !important}.debug-mode tw-collapsed::before{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"{"}.debug-mode tw-collapsed::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"}"}.debug-mode tw-verbatim::before,.debug-mode tw-verbatim::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"`"}.debug-mode tw-align[style*="text-align: center"]{background:linear-gradient(to right, hsla(14, 100%, 87%, 0) 0%, hsla(14, 100%, 87%, 0.25) 50%, hsla(14, 100%, 87%, 0) 100%)}.debug-mode tw-align[style*="text-align: left"]{background:linear-gradient(to right, hsla(14, 100%, 87%, 0.25) 0%, hsla(14, 100%, 87%, 0) 100%)}.debug-mode tw-align[style*="text-align: right"]{background:linear-gradient(to right, hsla(14, 100%, 87%, 0) 0%, hsla(14, 100%, 87%, 0.25) 100%)}.debug-mode tw-column{background-color:rgba(189,228,255,.2)}.debug-mode tw-enchantment{animation:enchantment .5s infinite;border:1px solid}.debug-mode tw-link::after,.debug-mode tw-broken-link::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:attr(passage-name)}.debug-mode tw-include{background-color:rgba(204,128,51,.1)}.debug-mode tw-include::before{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:attr(type) ' "' attr(name) '"'}.debug-dialogs tw-backdrop:not(.eval-replay):not(.harlowe-crash){pointer-events:none;opacity:.1}tw-eval-replay tw-eval-code,tw-eval-replay tw-eval-explanation{max-height:20vh;overflow:auto;margin:10px auto}tw-eval-replay tw-eval-code{display:block;font-family:monospace;padding-bottom:1ex;border-bottom:2px solid gray}tw-eval-replay tw-eval-explanation{display:block;text-align:center}tw-eval-replay tw-eval-explanation>code{white-space:pre-wrap}tw-eval-replay tw-eval-explanation>code.from-block{width:40%;display:inline-block;text-align:left;max-height:4em;overflow-wrap:anywhere;overflow-y:scroll}tw-eval-replay tw-eval-explanation>code.from-block~.to-desc{width:calc(40% - 2em);margin-left:2em;display:inline-block}tw-eval-replay tw-eval-explanation>code.from-block+span::after{content:"..."}tw-eval-replay tw-eval-explanation>code.from-inline{text-align:right}tw-eval-replay tw-eval-explanation>:nth-child(2){white-space:pre}tw-eval-replay tw-eval-explanation>.to-desc{text-align:left}tw-eval-replay tw-eval-explanation>table{width:100%;margin-top:1em}tw-eval-replay tw-eval-explanation>table td{white-space:pre-wrap !important;word-wrap:anywhere}tw-eval-replay tw-eval-reason{text-align:center;font-size:80%;font-style:italic;display:block}tw-eval-replay tw-eval-it{text-align:center;font-size:80%;display:block}tw-eval-replay tw-dialog-links{display:-ms-flexbox;display:flex;-ms-flex-pack:distribute;justify-content:space-around}@keyframes enchantment{0%,to{border-color:#ffb366}50%{border-color:#6fc}}tw-debugger{position:fixed;box-sizing:border-box;bottom:0;right:0;z-index:999999;min-width:14em;min-height:1em;padding:0em .5em .5em 1em;font-size:1.25em;font-family:sans-serif;color:#262626;background-color:#fff;border-left:solid #262626 2px;border-top:solid #262626 2px;border-top-left-radius:.5em;opacity:1}tw-debugger.fade-panel:not(:hover){opacity:.33}tw-debugger.theme-dark{color:#d9d9d9;background-color:#000}tw-debugger.theme-dark{border-color:#d9d9d9 rgba(0,0,0,0) rgba(0,0,0,0) #d9d9d9}tw-debugger select{margin-right:1em;width:12em}tw-debugger button,tw-debugger tw-link{border-radius:3px;border:solid #999 1px;margin:auto 4px;color:#262626;background-color:#fff;cursor:pointer}tw-debugger button.enabled,tw-debugger tw-link.enabled{color:#000;background-color:#d9d9d9;box-shadow:inset #999 3px 5px .5em}tw-debugger.theme-dark button,tw-debugger.theme-dark tw-link{color:#d9d9d9;background-color:#000;border-color:#666}tw-debugger.theme-dark button.enabled,tw-debugger.theme-dark tw-link.enabled{color:#e6e6e6;background-color:#424242;box-shadow:inset #666 3px 5px .5em}tw-debugger button{font-size:1em;overflow-x:hidden;text-overflow:ellipsis;white-space:pre}tw-debugger tw-link{font-size:1.25em;border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block}tw-debugger tw-link:hover{border-color:#262626;color:#262626}tw-debugger.theme-dark tw-link:hover{border-color:#d9d9d9;color:#d9d9d9}tw-debugger tw-dialog{background-color:#fff;color:#000;font-size:1.25em}tw-debugger.theme-dark tw-dialog{background-color:#000;color:#e6e6e6}tw-debugger .panel{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;position:absolute;bottom:100%;left:-2px;right:0;padding:1em;overflow-y:scroll;overflow-x:hidden;border:inherit;box-sizing:content-box;background-color:#fff;border-bottom:solid #999 2px;border-top-left-radius:.5em;border-bottom-left-radius:.5em;font-size:.8em}tw-debugger .panel:empty,tw-debugger .panel[hidden]{display:none}tw-debugger.theme-dark .panel{background-color:#000;border-bottom-color:#666}tw-debugger .panel-source .panel-row-buttons{width:2rem}tw-debugger .panel-source .source-tags{width:20%;font-style:italic}tw-debugger .panel-row-source td{font-family:monospace;font-size:1rem;white-space:pre-wrap;overflow-wrap:anywhere;max-height:8rem;padding:1rem}tw-debugger .panel-rows{width:100%;overflow-x:scroll}tw-debugger .panel-rows>*{display:table-row}tw-debugger .panel-rows>div:nth-of-type(2n){background-color:#e6e6e6}tw-debugger .panel-tools .panel-rows>*,tw-debugger .panel-options .panel-rows>*{margin-top:.4rem;display:block}tw-debugger.theme-dark .panel-rows>div:nth-of-type(2n){background-color:#212121}tw-debugger .panel-row-buttons{text-align:right}tw-debugger .panel-variables .panel-rows:empty::before{content:"~ No variables ~";font-style:italic;color:#575757;text-align:center}tw-debugger .panel-enchantments .panel-rows:empty::before{content:"~ No enchantments ~";font-style:italic;color:#575757;text-align:center}tw-debugger .panel-errors .panel-rows:empty::before{content:"~ No errors... for now. ~";font-style:italic;color:#575757;text-align:center}tw-debugger .panel-errors .panel-rows:empty+.panel-errors-bottom{display:none}tw-debugger.theme-dark .panel-variables .panel-rows:empty::before,tw-debugger.theme-dark .panel-enchantments .panel-rows:empty::before,tw-debugger.theme-dark .panel-errors .panel-rows:empty::before{color:#a8a8a8}tw-debugger .panel-rows:empty+.panel-variables-bottom{display:none}tw-debugger th[data-col]{text-decoration:underline;cursor:pointer}tw-debugger th[data-col][data-order=asc]::after{content:"↓"}tw-debugger th[data-col][data-order=desc]::after{content:"↑"}tw-debugger .panel-storylets:not(.panel-exclusive) .storylet-exclusive,tw-debugger .panel-storylets:not(.panel-urgent) .storylet-urgent{display:none}tw-debugger .storylet-exclusive,tw-debugger .storylet-urgent,tw-debugger .storylet-open{text-align:center}tw-debugger .panel-variables-bottom{padding-top:5px}tw-debugger .enchantment-row{min-height:1.5em}tw-debugger .variable-path{opacity:.4}tw-debugger .temporary-variable-scope,tw-debugger .enchantment-local{font-family:sans-serif;font-weight:normal;opacity:.8;font-size:.75em}tw-debugger .temporary-variable-scope:not(:empty)::before,tw-debugger .enchantment-local:not(:empty)::before{content:" in "}tw-debugger .variable-name,tw-debugger .enchantment-name{font-family:monospace;font-weight:bold}tw-debugger .variable-type{color:#575757;font-weight:normal;text-overflow:ellipsis;overflow:hidden;max-width:10em}tw-debugger.theme-dark .variable-type{color:#a8a8a8}tw-debugger .error-row{display:table-row;background-color:rgba(230,101,204,.3)}tw-debugger .error-row:nth-of-type(2n){background-color:rgba(237,145,219,.3)}tw-debugger .error-row>*{display:table-cell;padding:.25em .5em}tw-debugger .error-row .error-message[title]:not([title=""]){cursor:help}tw-debugger .error-row .error-passage{color:#575757}tw-debugger.theme-dark .error-row .error-passage{color:#a8a8a8}tw-debugger .storylet-row{background-color:rgba(193,240,225,.3)}tw-debugger .storylet-row:nth-child(2n){background-color:rgba(152,231,204,.3)}tw-debugger .storylet-row.storylet-closed{font-style:italic;background-color:#fff}tw-debugger .storylet-row.storylet-closed:nth-child(2n){background-color:#e6e6e6}tw-debugger .storylet-row.storylet-closed>:not(.storylet-lambda){opacity:.6}.storylet-error tw-debugger .storylet-row{background-color:rgba(230,101,204,.3)}.storylet-error tw-debugger .storylet-row:nth-child(2n){background-color:rgba(237,145,219,.3)}tw-debugger .storylet-row .storylet-name,tw-debugger .storylet-row .storylet-value{display:inline-block;width:50%}tw-debugger .storylet-row .storylet-lambda{font-family:monospace;font-size:1rem;white-space:pre-wrap;overflow-wrap:anywhere}tw-debugger.theme-dark .storylet-row.storylet-closed{background-color:#000}tw-debugger.theme-dark .storylet-row.storylet-closed:nth-child(2n){background-color:#212121}tw-debugger .tabs{padding-bottom:.5em}tw-debugger .tab{border-radius:0px 0px .5em .5em;border-top:none;top:-2px}tw-debugger .resizer-h{position:absolute;height:14em;border-left:2px solid #999;border-right:2px solid #999;top:10px;left:4px;width:8px;cursor:ew-resize}tw-debugger.theme-dark .resizer-h{border-color:rgba(0,0,0,0) #666}tw-debugger .resizer-v{position:absolute;height:8px;border-top:2px solid #999;border-bottom:2px solid #999;margin-bottom:4px;top:4px;left:10px;width:95%;cursor:ns-resize;box-sizing:border-box}tw-debugger.theme-dark .resizer-v{border-color:#666 rgba(0,0,0,0)}tw-debugger mark{color:inherit;background-color:rgba(101,230,230,.3) !important}tw-dialog{z-index:999997;border:#fff solid 2px;padding:2em;color:#fff;background-color:#000;display:block}@media(min-width: 576px){tw-dialog{max-width:50vw}}tw-dialog input[type=text]{font-size:inherit;width:100%;border:solid #fff !important}tw-dialog-links{text-align:right;display:-ms-flexbox;display:flex;-ms-flex-pack:end;justify-content:flex-end}tw-backdrop{z-index:999996;position:fixed;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,.8);display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center}tw-backdrop~tw-backdrop{display:none}tw-link,.enchantment-link{cursor:pointer;color:#4169e1;font-weight:bold;text-decoration:none;transition:color .2s ease-in-out}tw-passage [style^=color] tw-link:not(:hover),tw-passage [style*=" color"] tw-link:not(:hover),tw-passage [style^=color][hover=true] tw-link:hover,tw-passage [style*=" color"][hover=true] tw-link:hover,tw-passage [style^=color] .enchantment-link:not(:hover),tw-passage [style*=" color"] .enchantment-link:not(:hover),tw-passage [style^=color][hover=true] .enchantment-link:hover,tw-passage [style*=" color"][hover=true] .enchantment-link:hover{color:inherit}tw-link:hover,.enchantment-link:hover{color:#00bfff}tw-link:active,.enchantment-link:active{color:#dd4b39}.visited{color:#6941e1}tw-passage [style^=color] .visited:not(:hover),tw-passage [style*=" color"] .visited:not(:hover),tw-passage [style^=color][hover=true] .visited:hover,tw-passage [style*=" color"][hover=true] .visited:hover{color:inherit}.visited:hover{color:#e3e}tw-broken-link{color:#933;border-bottom:2px solid #933;cursor:not-allowed}tw-passage [style^=color] tw-broken-link:not(:hover),tw-passage [style*=" color"] tw-broken-link:not(:hover),tw-passage [style^=color][hover=true] tw-broken-link:hover,tw-passage [style*=" color"][hover=true] tw-broken-link:hover{color:inherit}tw-link.enchantment-mouseover,.link.enchantment-mouseover,tw-expression.enchantment-mouseover>tw-link{color:inherit;font-weight:inherit;transition:none;cursor:inherit;border-bottom:2px dashed #999}tw-link.enchantment-mouseover:hover,tw-link.enchantment-mouseover:active,.link.enchantment-mouseover:hover,.link.enchantment-mouseover:active,tw-expression.enchantment-mouseover>tw-link:hover,tw-expression.enchantment-mouseover>tw-link:active{color:inherit}tw-link.enchantment-mouseover.enchantment-button,.link.enchantment-mouseover.enchantment-button,tw-expression.enchantment-mouseover>tw-link.enchantment-button{border-style:dashed}tw-link.enchantment-mouseout,.link.enchantment-mouseout,tw-expression.enchantment-mouseout>tw-link{color:inherit;font-weight:inherit;transition:none;cursor:inherit;border:rgba(64,149,191,.6) 1px solid;border-radius:.2em}tw-link.enchantment-mouseout:hover,tw-link.enchantment-mouseout:active,.link.enchantment-mouseout:hover,.link.enchantment-mouseout:active,tw-expression.enchantment-mouseout>tw-link:hover,tw-expression.enchantment-mouseout>tw-link:active{color:inherit}tw-link.enchantment-mouseout:hover,.link.enchantment-mouseout:hover,tw-expression.enchantment-mouseout>tw-link:hover{background-color:rgba(175,197,207,.75);border:rgba(0,0,0,0) 1px solid}tw-link.enchantment-dblclick,.link.enchantment-dblclick,tw-expression.enchantment-dblclick>tw-link{color:inherit;font-weight:inherit;transition:none;cursor:inherit;cursor:pointer;border:2px solid #999;border-radius:0}tw-link.enchantment-dblclick:hover,tw-link.enchantment-dblclick:active,.link.enchantment-dblclick:hover,.link.enchantment-dblclick:active,tw-expression.enchantment-dblclick>tw-link:hover,tw-expression.enchantment-dblclick>tw-link:active{color:inherit}tw-link.enchantment-dblclick:active,.link.enchantment-dblclick:active,tw-expression.enchantment-dblclick>tw-link:active{background-color:#999}tw-link.enchantment-button,.link.enchantment-button,.enchantment-button:not(.link) tw-link,.enchantment-button:not(.link) .link{border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block}.enchantment-button{display:block}.enchantment-clickblock{cursor:pointer;width:100%;height:100%;display:block}.enchantment-clickblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;color:rgba(65,105,225,.5);transition:color .2s ease-in-out}.enchantment-clickblock>:not(tw-enchantment):hover::after{color:rgba(0,191,255,.5)}.enchantment-clickblock>:not(tw-enchantment):active::after{color:rgba(222,78,59,.5)}.enchantment-clickblock>:not(tw-enchantment)::after{box-shadow:inset 0 0 0 .5vmax}.enchantment-clickblock>tw-passage::after,.enchantment-clickblock>tw-sidebar::after{box-shadow:0 0 0 .5vmax}.enchantment-mouseoverblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;border:2px dashed #999}.enchantment-mouseoutblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;border:rgba(64,149,191,.6) 2px solid}.enchantment-mouseoutblock:hover>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;background-color:rgba(175,197,207,.75);border:rgba(0,0,0,0) 2px solid;border-radius:.2em}.enchantment-dblclickblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;cursor:pointer;border:2px solid #999}tw-dialog-links{padding-top:1.5em}tw-dialog-links tw-link{border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block;display:inline-block}html{margin:0;height:100%;overflow-x:hidden}*,:before,:after{position:relative;box-sizing:inherit}body{margin:0;height:100%}tw-storydata{display:none}tw-story{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;font:100% Georgia,serif;box-sizing:border-box;width:100%;min-height:100%;font-size:1.5em;line-height:1.5em;padding:5% 5%;overflow:hidden;background-color:#000;color:#fff}tw-story [style*=content-box] *{box-sizing:border-box}@media(min-width: 576px){tw-story{padding:5% 20%}}tw-story tw-consecutive-br{display:block;height:1.6ex;visibility:hidden}tw-story select{background-color:rgba(0,0,0,0);font:inherit;border-style:solid;padding:2px}tw-story select:not([disabled]){color:inherit}tw-story textarea{resize:none;background-color:rgba(0,0,0,0);font:inherit;color:inherit;border-style:none;padding:2px}tw-story input[type=text]{background-color:rgba(0,0,0,0);font:inherit;color:inherit;border-style:none}tw-story input[type=checkbox]{transform:scale(1.5);margin:0 .5em .5em .5em;vertical-align:middle}tw-story tw-noscript{animation:appear .8s}tw-passage{display:block}tw-sidebar{text-align:center;display:-ms-flexbox;display:flex;-ms-flex-pack:justify;justify-content:space-between}@media(min-width: 576px){tw-sidebar{left:-5em;width:3em;position:absolute;-ms-flex-direction:column;flex-direction:column}tw-enchantment[style*=width]>tw-sidebar{width:inherit}}tw-icon{display:inline-block;margin:.5em 0;font-size:66px;font-family:"Verdana",sans-serif}tw-icon[alt]{opacity:.2;cursor:pointer}tw-icon[alt]:hover{opacity:.4}tw-icon[data-label]::after{font-weight:bold;content:attr(data-label);font-size:20px;bottom:-20px;left:-50%;white-space:nowrap}tw-meter{display:block}tw-hook:empty,tw-expression:empty{display:none}tw-error{display:inline-block;border-radius:.2em;padding:.2em;font-size:1rem;cursor:help;white-space:pre-wrap}tw-error.error{background-color:rgba(223,58,190,.6);color:#fff}tw-error.warning{background-color:rgba(223,140,58,.6);color:#fff;display:none}.debug-mode tw-error.warning{display:inline}tw-error-explanation{display:block;font-size:.8rem;line-height:1rem}tw-open-button,tw-folddown{cursor:pointer;line-height:0em;border-radius:4px;border:1px solid rgba(255,255,255,.5);font-size:.8rem;margin:0 .2rem;padding:3px;white-space:pre}tw-folddown::after{content:"▶"}tw-folddown.open::after{content:"▼"}tw-open-button[replay]{display:none}tw-error tw-open-button,tw-eval-replay tw-open-button{display:inline !important}tw-open-button::after{content:attr(label)}tw-notifier{border-radius:.2em;padding:.2em;font-size:1rem;background-color:rgba(223,182,58,.4);display:none}.debug-mode tw-notifier{display:inline}tw-notifier::before{content:attr(message)}tw-colour{border:1px solid #000;display:inline-block;width:1em;height:1em}tw-enchantment:empty{display:none}h1{font-size:3em}h2{font-size:2.25em}h3{font-size:1.75em}h1,h2,h3,h4,h5,h6{line-height:1em;margin:.3em 0 .6em 0}pre{font-size:1rem;line-height:initial}small{font-size:70%}big{font-size:120%}mark{color:rgba(0,0,0,.6);background-color:#ff9}ins{color:rgba(0,0,0,.6);background-color:rgba(255,242,204,.5);border-radius:.5em;box-shadow:0em 0em .2em #ffe699;text-decoration:none}center{text-align:center;margin:0 auto;width:60%}blink{text-decoration:none;animation:fade-in-out 1s steps(1, end) infinite alternate}tw-align{display:block}tw-columns{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;-ms-flex-pack:justify;justify-content:space-between}.transition-in{animation:appear 0ms step-start}.transition-out{animation:appear 0ms step-end}[data-t8n^=dissolve].transition-in,[data-t8n=fade].transition-in{animation:appear .8s}[data-t8n^=dissolve].transition-out,[data-t8n=fade].transition-out{animation:appear .8s reverse}[data-t8n^=shudder].transition-in{display:inline-block !important;animation:shudder-in .8s}[data-t8n^=shudder].transition-out{display:inline-block !important;animation:shudder-in .8s reverse}[data-t8n^=rumble].transition-in{display:inline-block !important;animation:rumble-in .8s}[data-t8n^=rumble].transition-out{display:inline-block !important;animation:rumble-in .8s reverse}[data-t8n^=pulse].transition-in{animation:pulse .8s;display:inline-block !important}[data-t8n^=pulse].transition-out{animation:pulse .8s reverse;display:inline-block !important}[data-t8n^=zoom].transition-in{animation:zoom-in .8s;display:inline-block !important}[data-t8n^=zoom].transition-out{animation:zoom-in .8s reverse;display:inline-block !important}[data-t8n^=blur].transition-in{animation:blur .8s;display:inline-block !important}[data-t8n^=blur].transition-out{animation:blur .8s reverse;display:inline-block !important}[data-t8n^=slideleft].transition-in{animation:slide-left .8s;display:inline-block !important}[data-t8n^=slideleft].transition-out{animation:slide-right .8s reverse;display:inline-block !important}[data-t8n^=slideright].transition-in{animation:slide-right .8s;display:inline-block !important}[data-t8n^=slideright].transition-out{animation:slide-left .8s reverse;display:inline-block !important}[data-t8n^=slideup].transition-in{animation:slide-up .8s;display:inline-block !important}[data-t8n^=slideup].transition-out{animation:slide-down .8s reverse;display:inline-block !important}[data-t8n^=slidedown].transition-in{animation:slide-down .8s;display:inline-block !important}[data-t8n^=slidedown].transition-out{animation:slide-up .8s reverse;display:inline-block !important}[data-t8n^=fadeleft].transition-in{animation:fade-left .8s;display:inline-block !important}[data-t8n^=fadeleft].transition-out{animation:fade-right .8s reverse;display:inline-block !important}[data-t8n^=faderight].transition-in{animation:fade-right .8s;display:inline-block !important}[data-t8n^=faderight].transition-out{animation:fade-left .8s reverse;display:inline-block !important}[data-t8n^=fadeup].transition-in{animation:fade-up .8s;display:inline-block !important}[data-t8n^=fadeup].transition-out{animation:fade-down .8s reverse;display:inline-block !important}[data-t8n^=fadedown].transition-in{animation:fade-down .8s;display:inline-block !important}[data-t8n^=fadedown].transition-out{animation:fade-up .8s reverse;display:inline-block !important}[data-t8n^=flicker].transition-in{animation:flicker .8s}[data-t8n^=flicker].transition-out{animation:flicker .8s reverse}
 </style>
 </head>
 <body>
-<tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Mirror of Three.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Mirror of Three" startnode="1" creator="Twine" creator-version="2.9.2" format="Harlowe" format-version="3.3.9" ifid="A89ECD2F-9510-4C9C-A51E-D9C6DC10561F" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Where it begins" tags="" position="725,50" size="100,100">✧･ﾟ: *✧･ﾟ:* 　　*:･ﾟ✧*:･ﾟ✧✧･ﾟ: *✧･ﾟ:* 　　    *:･ﾟ✧*:･ﾟ✧ ✧･ﾟ: *✧･ﾟ:* 　　*:･ﾟ✧*:･ﾟ✧
+<tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Town of Lillies.</tw-noscript></noscript></tw-story>
+<tw-storydata name="Town of Lillies" startnode="20" creator="Twine" creator-version="2.10.0" format="Harlowe" format-version="3.3.9" ifid="7E82CB4A-9C5E-45E9-BCD8-9F72E598EE74" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-story {
+ background-image:url("https://sacredstone.atlantia.sca.org/wp-content/uploads/2019/04/dark-green-grunge-wallpaper-background-49803-51481-hd-wallpapers-1.jpg");
+ background-size:cover;
+}
 
 
+tw-passage {
+color:tan;
+}
 
-During the summer, you were sent to stay at your great aunt&#39;s house. She had no television, no radio, and no internet—just walls covered with buttons, various rabbit-themed items, and a broken clock. The days felt long, but the nights were the hardest part. You could hear the mice tapping their feet, and the old house seemed to breathe around you. At times, you preferred the sound of your great aunt sucking on her favorite button to these unsettling noises.
+tw-button {
+  background-color: #f4e1c1; /* Paper tan color */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
 
-One night, you&#39;d had enough. You slipped out of bed, drawn by a faint light creeping through the door. Stepping into the dimly lit hallway to keep the darkness at bay, you stopped to listen. The sound guided you through the house until you found two mice chattering quietly to themselves in the sitting room. As you approached, they stopped and scampered straight into a mirror positioned just behind the loveseat.
+tw-button:hover {
+  background-color: #e0c0a0; /* Slightly darker tan on hover */
+}
+</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Start" tags="" position="875,175" size="100,100">Every person, when they become of age, has to decide in the Town of Lillies what they want to do in the magic system. Today is your day to take this mysterious test:
 
-You thought they must have hurt themselves—or worse. You pushed the loveseat aside, revealing only the mirror standing against the pink wall. In its reflection, you could still see the mice, though when you looked around the room, they were nowhere to be found. They existed solely in the reflected world of this mirror.
+You enter a room and are told there are three items on the table: a feather, a potion, and a pocket watch. The feather gives you access to flight as long as you hold it. The potion grants you invisibility for a few hours when you drink it. The pocket watch allows you to go back in time up to 24 hours.
 
-You pressed your fingers against the mirror, and they slipped through its surface. You realized that this mirror was a portal—but to where? You could always return to your bed in time for breakfast, which meant you could explore this strange world further.
+What item will you choose?
+[[Feather of Flight]] 
+[[Potion of Invisibility]] 
+[[Arcanic Pocket Watch]] 
+</tw-passagedata><tw-passagedata pid="2" name="Elixir Sage" tags="" position="800,475" size="100,100">After years of studying, you receive a notice to meet in the lecture hall instead of going to your graduation. Chatter fills the halls as people bounce ideas off each other about the strange turn of events. Some of your classmates believe it was a prank done by one of the spell weavers earlier that year, causing this assumed punishment. Soon all the chairs are filled, and the chatter slowly dies down, leaving curiosity and frustration. An old, brittle man steps onto the stage and scans the room.
 
-Choose: Do you wait or do you go in now?
+&quot;As you all know, we have taught you valuable skills throughout the years. Now we expect you to use these skills to help our town and other neighboring cities with the invasion of black magic at our front door.&quot;
 
-[[Wait]]
- [[Go]] </tw-passagedata><tw-passagedata pid="2" name="Wait" tags="" position="550,200" size="100,100">You decided that perhaps this adventure could wait until morning. With a good night’s rest, you could explore this world with clarity—and determine if it was, in fact, not just a dream.
+The room bursts into shock and questioning before anyone can get another word out. The old man claps, and the room falls silent.
 
-You shuffled back to bed. The next morning, you woke to the smell of coffee, eggs, and bacon. While your great-aunt could be boring, she was certainly not unkind. Drawn by the scent, you made your way to the kitchen, where she sat at the table, reading a newspaper that was twenty years old and sipping her coffee. A plate of eggs and bacon waited at your place, with a fork and butter knife beside it.
+&quot;Now, I understand. We did not teach you about black magic, as we thought it was long dead. Tomorrow morning, you will be packing your bags and leaving for where you are needed. All of you must go, as you have a legacy to uphold.&quot;
 
-A thought crossed your mind: maybe your great-aunt knew about the mirror.
+Your peers&#39; worries swirled across the room; they would rather not partake in the conflict or at least hoped they wouldn’t be on the frontlines. You stayed up that night debating whether this situation could cost lives or if there was a war being hidden by the higher ups this entire time.
+[[Morning]] </tw-passagedata><tw-passagedata pid="3" name="Spell Weaver" tags="" position="400,575" size="100,100">After years of studying, you receive a notice to meet in the lecture hall instead of going to your graduation. Chatter fills the halls as people bounce ideas off each other about the strange turn of events. Your peers get accused of causing this assumed punishment all because of prank they pulled earlier this year. Soon all the chairs are filled, and the chatter slowly dies down, leaving curiosity and frustration. An old, brittle man steps onto the stage and scans the room.
 
-“Aunt Meredith, do you know anything about the mirror in the sitting room?”
+&quot;As you all know, we have taught you valuable skills throughout the years. Now we expect you to use these skills to help our town and other neighboring cities with the invasion of black magic at our front door.&quot;
 
-“You mean the sitting room?” she replied. “It belonged to my sister before she passed.”
+The room bursts into shock and questioning before anyone can get another word out. The old man claps, and the room falls silent.
 
-Perhaps it would be insensitive to ask her more about the mirror. You could always investigate it yourself without upsetting her.
+&quot;Now, I understand. We did not teach you about black magic, as we thought it was long dead. Tomorrow morning, you will be packing your bags and leaving for where you are needed. All of you must go, as you have a legacy to uphold.&quot;
 
-What will you do?
+Your friends joke about the possibilities for the adventure and what it will be about. Perhaps there are dragons, hammers forged by the gods, or maybe even an all-powerful demon you’ll have to fight. You spend the rest of the night chatting about these ideas until dawn, not sleeping a wink.
 
-[[Press further]] 
-[[Drop it]] </tw-passagedata><tw-passagedata pid="3" name="Go" tags="" position="925,200" size="100,100">You could wait until morning, but if this portal only opened at night, you might miss your opportunity—and your chance to escape the boredom. You crawled through the mirror and felt the temperature change as the carpet beneath you turned to grass. 
+[[Assignment]] </tw-passagedata><tw-passagedata pid="4" name="Alchemist Smith" tags="" position="600,575" size="100,100">After years of studying, you receive a notice to meet in the lecture hall instead of going to your graduation. Chatter fills the halls as people bounce ideas off each other about the strange turn of events. Some believe it was a prank done by one of the spell weavers earlier that year, causing this assumed punishment. Soon all the chairs are filled, and the chatter slowly dies down, leaving curiosity and frustration. An old, brittle man steps onto the stage and scans the room.
 
-You stand up and brush the dirt off your knees. In front of you are two mice, glowing a soft pastel blue, chattering in words you can almost understand. &#39;Hello?&#39; you call out, testing to see if they’ll respond. One mouse turns away, and the other tilts its head, glancing at you briefly before they resume their chattering. Though they seem unfriendly, perhaps you could try speaking to them again.... They might have answers. You can explore this area, but you sense you shouldn&#39;t stray too far from the mirror behind you.
+&quot;As you all know, we have taught you valuable skills throughout the years. Now we expect you to use these skills to help our town and other neighboring cities with the invasion of black magic at our front door.&quot;
 
-Choose: Try to get answers or move on?
-[[Move on]] 
-[[Ask Questions to the Mice]] </tw-passagedata><tw-passagedata pid="4" name="Press further" tags="" position="475,325" size="100,100">You set down your fork, trying to peer through her newspaper. “Was the mirror important to her?”
+The room bursts into shock and questioning before anyone can get another word out. The old man claps, and the room falls silent.
 
-“She had it her whole life,” Aunt Meredith replied. “When she died, I inherited it in her will. I couldn’t stand to look at it on the wall, so I just put it behind the loveseat.”
+&quot;Now, I understand. We did not teach you about black magic, as we thought it was long dead. Tomorrow morning, you will be packing your bags and leaving for where you are needed. All of you must go, as you have a legacy to uphold.&quot;
 
-“Is that all it is?”
+Rumors throughout the night start to spiral, one specifically claiming that one of your classmates had left a year ago and created a weapon. This weapon allows the user to use potions and cast spells. You wonder how many of your classmates knew about this and didn’t say anything. You don’t sleep that night, wondering if this is true and why everyone is being deployed.
+[[Aid]] </tw-passagedata><tw-passagedata pid="5" name="Feather of Flight" tags="" position="425,300" size="100,100">You pick up the feather and look at the prismatic shine reflecting off of it. A woman then asks you for your reasoning for choosing this item. (Pick the option that you feel fits you best.)
 
-She looked over her reading glasses, frowning. “I’m not sure what else you could possibly want to know.”
+A: This will allow me to go wherever I want within the world.
+B: This is a practical way of getting where I need to go.
+C: This item is useful and would allow me to help others and myself.
 
-“Is it... magical?”
+Choose your choice:
+[[Choice A]] 
+[[Choice B]]
+[[Choice C]] </tw-passagedata><tw-passagedata pid="6" name="Potion of Invisibility" tags="" position="575,300" size="100,100">You pick up the small potion bottle with a light blue liquid. A woman asks you for your reasoning for choosing that item. (Pick the option that you feel fits you best.)
 
-She sighed, placing the newspaper down in front of her. “Why would you think that?”
+A: I can get into forbidden areas and make people believe in ghosts.
+B: I can gather more information about a situation and work undisturbed.
+C: I can avoid conflict and use it to help myself or others.
 
-You realized that the more you pressed, the more ridiculous you sounded. All you had learned was that it was, indeed, her sister’s mirror. You decided to go into the mirror that night.
+Choose your choice:
+[[Choice A]] 
+[[Choice B]] 
+[[Choice C]] </tw-passagedata><tw-passagedata pid="7" name="Arcanic Pocket Watch" tags="" position="725,300" size="100,100">You pick up  the arcanic pocket watch; the casing is engraved with a starry sky and a dragon on it. A woman asks for your reasoning for choosing the item. (Pick the option that you feel fits you best.)
 
-[[Go]] </tw-passagedata><tw-passagedata pid="5" name="Drop it" tags="" position="600,325" size="100,100">You decide to drop the subject, sensing it&#39;s a sore spot for your great aunt. She clears her throat, glances at you, then buries her eyes back in her paper.
+A: Try to seek out all the possibilities and get the most from the previous day.
+B: Correct some mistakes you made the previous day.
+C: Relive yesterday and better your odds for tomorrow.
+Choose your choice:
+[[Choice A]] 
+[[Choice B]] 
+[[Choice C]] </tw-passagedata><tw-passagedata pid="8" name="Choice A" tags="" position="450,425" size="100,100">You are best suited to study spell casting and now are a spell weaver.
 
-&#39;You know, my sister and I were close. She was quirky, a bit of an airhead, but always well-meaning. When she lost her pet rabbit as a child, something changed in her. For a year or two, she would just stare at that strange mirror, like it was speaking to her soul. Wherever she lived, that mirror was always on her wall—it felt like it had a part of her. I can&#39;t bring myself to get rid of it because of how much it meant to her.&#39;
+Continue:
+[[Spell Weaver]] 
+</tw-passagedata><tw-passagedata pid="9" name="Choice B" tags="" position="600,450" size="100,100">You are best suited to study magical forging and now are a Alchemist Smith.
 
-For the rest of the day, she didn’t speak another word. Boredom dragged on until nightfall, and as you lay in bed, unable to sleep, you find yourself drawn to the mirror. You pull it in front of you and begin to crawl into its hollow reflection.
+Continue:
+[[Alchemist Smith]] </tw-passagedata><tw-passagedata pid="10" name="Choice C" tags="" position="725,425" size="100,100">You are best suited to study magical potions and now are an Elixir Sage.
 
-Continue.....
-[[Go]]</tw-passagedata><tw-passagedata pid="6" name="Move on" tags="" position="850,325" size="100,100">You walk past the mice, who continue chattering to themselves. The farther you move from their voices, the clearer your surroundings become. Towering trees with branches full of white blossoms rise above you. Soon, you spot a path that leads to a small town. Cottages line the way, each with a warm fire glowing inside, and various animals milling about.
+Continue:
+[[Elixir Sage]] </tw-passagedata><tw-passagedata pid="11" name="Morning" tags="" position="800,625" size="100,100">The sun rises as your peers finish packing their things. Outside the school, carriages wait in neat rows. One by one, each carriage is filled and begins to move. The journey has started.
+You are sent throughout the country to various makeshift medical tents. By chance, you are placed near the capital. Your first few weeks consist of training and waiting for something to happen until one night, you are jolted awake by what feels like an earthquake. Outside, forces wielding magic unlike anything you’ve ever seen are attacking the city.
 
-As you peer curiously through a window, a frog walking upright appears beside you. &#39;Why are you here?&#39; it asks.
+Terrified, you spot an injured soldier and a civilian caught in the chaos. Calling for help, you work to pull them away from the battle and into the medical tent. However, as you examine their wounds, you realize something unsettling, they are not bleeding. Instead, they bear some sort of magical injury, unlike anything you&#39;ve encountered before.
 
-You turn, meeting the frog’s gaze. &quot;What do you mean?&quot;
+Concerned and uncertain, you write a letter detailing the strange wounds and request guidance on how to treat them. Days pass with no response, and in that time, you watch in horror as the wounded slowly begin turning to stone before your very eyes.
 
-&quot;Humans who come here must pay a price to gain freedom of passage,&quot; it replies.
+Whatever this affliction is, you can only assume it is a curse or a disease being used by the enemy.
 
-The frog points at you and instructs, &quot;Raise your hands above your head and clap twice, you should speak with the queen.&quot;
+Finally, a letter arrives with a chilling response: they do not know what kind of sickness this is, and all the wounded must be burned as it is spreading.
 
-&quot;And if I don&#39;t?&quot; you ask.
+This choice leaves you baffled. Do you obey their orders, or do you attempt to find a cure?
 
-&quot;Then you become part of the forest that surrounds her palace,&quot; it answers with a solemn look.
 
-You wondered if this was a trick to get you to talk to the queen so you are left to think about what you should choose.
+[[Burn the wounded]] 
+[[Find a Cure]] 
 
-Choose: Listen to the frog or try to return home ?
-[[Clap your hands]] 
-[[Return Home]] </tw-passagedata><tw-passagedata pid="7" name="Ask Questions to the Mice" tags="" position="975,325" size="100,100">You cut through their chatter, your voice sharp and demanding. &quot;Where am I?&quot;
 
-The mice pause, their beady eyes aligning with yours as one of them responds. &quot;The Queen&#39;s glass palace.&quot;
 
-Another mouse sniffs you curiously, then whispers something to the others. &quot;Humans must go to the Queen to be granted a passage home.&quot;
 
-You frown. &quot;Where is that?&quot;
 
-&quot;Simple,&quot; one mouse replies. &quot;You put your hands above your head and clap twice, and you shall appear before her.&quot;
+</tw-passagedata><tw-passagedata pid="12" name="Aid" tags="" position="625,625" size="100,100">The sun rises as your peers finish packing their things. Outside the school, carriages wait in neat rows. One by one, each carriage is filled and begins to move. The journey has started.
 
-Before you can say anything else, you&#39;re shooed off. The mice scurry away, slowly disappearing into the forest, leaving you with only your thoughts.
+You meet at a manufacturing facility just outside a mountain village. The room is filled with some of your classmates and teachers. Here, you are supposed to help create magical items that detect black magic and assist in crafting components for city barriers.
 
-You wondered if this was a trick to get you to talk to the queen so you are left to think about what you should choose.
+A month after your arrival, one of your classmates successfully develops a device capable of detecting black magic. However, later that night, it is mysteriously destroyed. Some dismiss it as an accident, possibly the work of a stray mouse, but you are not convinced.
 
-Choose: Listen to the Mice or try to return home ?
-[[Clap your hands]] 
-[[Return Home]] 
-</tw-passagedata><tw-passagedata pid="8" name="Clap your hands" tags="" position="900,475" size="100,100">You decide to raise your hands above your head and clap twice. In an instant, you find yourself in a pure white room, filled with crystal furniture and chairs draped in soft white moss. Standing at the center of the room is the Queen—a tall, slender woman with pale skin, peach-colored lips, and rabbit ears poking through her curly white hair. Her face is an unusual blend of human and animal, her long dress trailing behind her.
+Two weeks pass and the item has been repaired. Determined to uncover the truth, you stay up late, watching over the device in the darkness. You knew it was no accident, something strange was happening.
 
-&quot;I assume you’re the Queen?&quot; you say, lowering your hands in disbelief.
+Footsteps echo in the dimly lit room. Quickly, you hide behind a workbench. You watch as Ambrose approaches the object, alchemist hammer in hand. Without hesitation, you rush forward and snatch the hammer from him.
 
-She leans down, studying your face with a curious smile. &quot;I cannot allow you to leave freely. The knowledge of my palace comes at a price.&quot; Straightening, she claps her hands, and several rabbits enter, carrying a tray filled with pastries and a tea set. As they set the tray down, the Queen picks up a delicate pink muffin. &quot;The price for returning home is simple,&quot; she says. &quot;A part of you, as payment for life.&quot;
+&quot;Why are you destroying it?!&quot;
 
-&quot;A part of me?&quot; you ask, uncertain.
+Ambrose’s eyes widen in shock, not realizing you were in the room.
 
-&quot;An emotion you can feel, some of your happiest memories, or perhaps something you hold dear,&quot; she replies with a soft smile.
+&quot;You would too if you knew what you were standing with.&quot;
 
-You consider your options—either strike a deal with her or risk trying to escape without paying the price.
+You tighten your grip on the hammer, taking a cautious step back.
 
-Choose: Return home or decide on deal?
-[[Return Home]] 
-[[Make a deal]] 
-</tw-passagedata><tw-passagedata pid="9" name="Return Home" tags="" position="1025,475" size="100,100">You decide not to listen to the frog, but the weight of its warning terrifies you. Turning back, you retrace your steps toward the mirror in the distance. You start to run, but as you do, your feet begin to transform into roots, anchoring themselves into the ground. Gradually, you feel yourself sinking as your skin hardens into bark and white blossoms begin to sprout. Just before you reach the mirror, you are fully transformed, a blossoming tree, now part of the forest forever.</tw-passagedata><tw-passagedata pid="10" name="Make a deal" tags="" position="900,625" size="100,100">✧･ﾟ: *✧･ﾟ:* 　　*:･ﾟ✧*:･ﾟ✧✧･ﾟ: *✧･ﾟ:* 　　*:･ﾟ✧*:･ﾟ✧✧･ﾟ: *✧･ﾟ:* 　　*:･ﾟ✧*:･ﾟ✧
+&quot;What do you mean, if I knew?&quot; you ask.
 
+Ambrose exhales before explaining. &quot;They have been lying to us. Our lives have been divided and shaped into roles they decided for us. Oberon discovered a way to set everyone free. He went to the Council of Magic to share his findings, only to be attacked. Before disappearing, he sent letters to a few of us, explaining what had happened and asking us to send him his belongings. Some of us chose to join him because we want change. We don’t want to be forced into the roles of smiths, enforcers, or whatever else was decided for us as children. We want the freedom to choose our own paths.&quot;
 
+Silence falls between you. The dim candlelight flickers, casting your shifting shadows along the walls.
 
+You take a deep breath and challenge him. &quot;Then why attack cities full of innocent people? There are rumors that you and your group are spreading an incurable disease , one with a 100% fatality rate.... Infecting your own families, friends, and peers. I want to know why.&quot;
 
-You realize that if you have a choice about who you are, it’s worth carefully weighing the risks and possible outcomes.
+Ambrose lowers his gaze before responding. &quot;In war, there is no winning side. We are doing what we must to change this system that means anyone who stands in our way. But if you join us, we can find another way to handle the cities.&quot;
 
-If you choose to give up an emotion, you could free yourself from burdens like fear. However, the downside is that you’d no longer relate to others in that area, leaving you permanently numb in a part of life.
+You realize Ambrose is not pleading for you to keep his secret , he is pleading for you to join him.
 
-As for your happiest memories, losing them would leave gaps in your past, but you could always make new memories to replace them. Still, those memories would be gone forever, leaving you unable to share them with others or feel the nostalgia they bring.
+You aren&#39;t sure if either side is truly worth it, but for the first time, the choice is yours.
 
-On the other hand, giving up something you hold dear might seem like an easier choice at first, but there’s uncertainty. If it includes something or someone alive, you might experience a profound loss. While you’d remain yourself, it could lead to irreplaceable grief that lingers for the rest of your life.
+Do you accept his invitation?
+[[Join them]] 
+[[Reject Invitation]] </tw-passagedata><tw-passagedata pid="13" name="Burn the wounded" tags="" position="775,875" size="100,100">Your hands tremble as you read the letter. Burn them. Burn them all.
 
-Each choice has its own cost....
+You hesitate, but deep down, you know what you must do. If this disease spreads, the entire world could be lost so you and your team must do what is needed.
 
-[[An Emotion You Can Feel]] 
-[[Happiest Memories]] 
-[[Something You Hold Dear]] </tw-passagedata><tw-passagedata pid="11" name="An Emotion You Can Feel" tags="" position="725,750" size="100,100">You decide to remove an emotion. The Queen snaps her fingers, and a card with your name on it appears in front of you. &quot;You can now return home as you please.&quot; Before you can fully process what has happened, you find yourself standing in front of the mirror once again. Stepping through, you emerge on the other side. The sun is just beginning to rise, even though what felt like only a couple of hours in the mirror had passed.
+With a heavy heart, you order the bonfires to be built. The wounded watch with pleading eyes, the begging for mercy turns into crying then into screaming. You tell yourself this is necessary. This is for the greater good.
 
-You smile, but something feels different. You’re not sure which emotion, if any, the Queen removed..... or if she did anything at all. As you start to head to bed, you notice your great aunt standing in the hall. &quot;Did you not sleep?&quot; she asks, hands on her hips.
+The fires roar into the sky, and the screams linger long after they stop. You watch each one burn not able to look away.
 
-&quot;I did not. I ended up going into the mirror,&quot; you reply, and in that moment, you realize you no longer feel fear. It isn’t the most useful emotion, after all. What could possibly go wrong?
+The days pass in eerie silence. The city is still under siege, but the spread of the disease has halted. The others praise your strength, calling you a hero.
+You don’t feel like one.
 
-Years pass, and you begin to question whether you made the right choice. You struggle to empathize with people’s worries or fully engage with their decisions. Apathy sets in, and you no longer feel the depth of emotion you once did. When people talk about the kid who went into the mirror, it no longer feels like it was you. That version of yourself seems like someone else entirely, because you can no longer remember what it felt like to be that kid. Now, you are an adult who has to fake relationships, feeling like a wolf in sheep&#39;s clothing. </tw-passagedata><tw-passagedata pid="12" name="Happiest Memories" tags="" position="850,750" size="100,100">You choose to give up your happiest memories. The Queen sighs and snaps her fingers. In front of you appears a card of passage. As you walk toward the mirror, you wonder if others have faced the same choices and whether you made the right one. This feels like a feverish nightmare, one you wish you could wake up from.
+Nights become restless, the scent of burning flesh haunting your dreams. You tell yourself you saved thousands, but their faces still appear behind your closed eyes. What if there had been another way?
 
-When you reach the mirror, you step through and emerge on the other side. You creep back into bed, reflecting on your life so far and wondering if it&#39;s okay without the memories. You can&#39;t recall your birthday party, the times you went to the zoo, or even the trips to the beach. All that&#39;s left are mediocre memories, and things you wish you could forget.
+One day, a letter arrives. Your mission is complete. You are being sent home.
 
-As the years pass, your childhood remains a blank space. You only feel as though you truly began to exist when you became an adult. Whenever people talk about their childhoods, it serves as a painful reminder of how hollow that part of yourself feels... Like a child who never experienced childhood happiness.</tw-passagedata><tw-passagedata pid="13" name="Something You Hold Dear" tags="" position="975,750" size="100,100">
+As you step off the carriage and into the familiar embrace of your family, you realize that they will never know what you have done.
 
-You decide to give up something you hold dear, thinking it might be a better choice than losing a part of yourself. The Queen smiles faintly and snaps her fingers. In front of you appears a card of passage. You walk toward the mirror, holding the card in your hand, your thoughts racing as you wonder what it could represent.
+But you do. And you know that, one way or another, you will never be the same again. 
+[[The End]] </tw-passagedata><tw-passagedata pid="14" name="Assignment" tags="" position="325,725" size="100,100">The sun rises as your peers finish packing their things. Outside the school, carriages wait in neat rows. One by one, each carriage is filled and begins to move. The journey has started.
 
-Stepping closer to the mirror, you pass through its surface. On the other side, you notice the sun is beginning to rise on the horizon and hurry to your bed. As you lay in bed, trying to drift off to sleep, a nagging thought lingers: it couldn&#39;t possibly be something you carried with you. Perhaps it was something at home, waiting for you.
+Along the way, you learn that spell weavers are being stationed within cities to create barriers, defending against the spread of black magic. When you arrive in the city assigned to you, you are tasked with helping to create these barriers alongside other students from your school—Alchemist Smiths.
 
-As summer draws to a close and your parents arrive to pick you up, the day feels strange, heavy. Your mother adjusts your jacket and sighs. 
-&quot;Your grandma&#39;s ashes are missing. Do you know what happened to them?&quot; she asks.
+You are led to city hall, where the head boy of the Alchemist Smiths, Regorn, is waiting for you. Before even shaking his hand, you ask, “Why am I not being put on defense?”
 
-You shake your head. The disappearance of your grandmother’s ashes marks the beginning of a lifelong internal guilt, one that festers within you as you realize that you are the sole reason for the loss. It was you who unknowingly destroyed the last physical connection your mother had to her mother. That knowledge weighs heavily on your heart, and you know there&#39;s no going back.</tw-passagedata></tw-storydata>
+Regorn lowers his hand and replies, “It is simply random, and not something I have control over.”This answer did not make you happy but there was no point in causing issues with your new partner for this project.
+
+Reluctantly, you begin your work, creating a spell to reinforce the barriers, making them last longer and withstand greater damage. However, as the days pass, you start receiving strange requests through letters. Some of them seem to suggest that, rather than keeping magic out, you are helping to create something that will keep magic in.
+
+Suspicious, you confront Regorn about these requests. He hesitates but ultimately confirms your fears, showing you a letter with instructions. He assures you that he will arrange a meeting with the higher ups to discuss the matter.
+
+On the day of the meeting, the truth is revealed: in order to protect the rest of the country, the city you are making a &#39;barrier&#39;for  is meant to be sacrificed. The plan is to lure the mysterious creator of the black magic weapon inside ,and trap them there forever.
+
+You are shocked. For the first time, you find yourself at a crossroads: should you continue with the plan or put a stop to it?
+
+[[Trust in the plan]] 
+[[Put a stop to this plan]] </tw-passagedata><tw-passagedata pid="15" name="Trust in the plan" tags="" position="400,875" size="100,100">You understand that this was probably not an easy choice for those in power to make. Despite your doubts, you decide to help Regorn continue working on the project as requested.
+
+Soon after, you and Regorn successfully complete the magic cage barrier. You send word of its completion, and by the end of the day, the device is installed around the city. Immediately after, you received orders to leave, you and Regorn are to pack your belongings and be out of the city within an hour.
+
+As you hurriedly gather your things, a sense of unease lingers. On impulse, you grab the letters and blueprints of the device, just in case you and Regorn are later blamed for what is about to unfold. A part of you wants to warn the people, to tell them to run but before you can act, enforcer guards arrive and escort you both to a waiting carriage.
+
+As the carriage departs, you look back. A glowing dome of light slowly forms over the city, your device, working exactly as designed.
+
+&quot;Are those people going to be okay?&quot; you ask, watching the city disappear in the distance.
+
+When the carriage finally arrives at a distant campsite, you step out and immediately recognize the same old, brittle man from before. Without thinking, you charge toward him, demanding, &quot;Why did you make us do that? All those people are trapped!&quot;
+
+Hands grab at your arms, restraining you, but the old man simply raises his hand, and the others let go. &quot;Come with me to my tent. We will talk,&quot; he says.
+
+Inside, he sits at a desk, his expression grave.
+
+&quot;We discovered that someone had developed a disease for biowarfare inside that city,&quot; he begins. &quot;A magic that slowly turns every single cell into stone. If it were to spread to the rest of the world, it would be the end of everything. Originally, we were supposed to create a barrier to keep it out, but during our investigation, we found out it was already inside the city. We had no choice. We couldn&#39;t risk it escaping, so we kept it a secret.&quot;
+
+His words leave you in stunned silence. You never imagined something so horrifying was possible, that the enemy was capable of something so inhumane.
+
+That night, you lie awake, uncertain of what the future holds. By morning, without further explanation, you are sent home to your family, on the condition that you never speak a word of what happened.
+
+You spend your days in quiet dread, knowing deep down that one day, you may be asked to do something terrible again ,all in the name of the greater good. 
+[[The End]] </tw-passagedata><tw-passagedata pid="16" name="Put a stop to this plan" tags="" position="250,875" size="100,100">You understand that this was probably not an easy choice for those in power to make. Despite your doubts, you decide to help Regorn continue working on the project as requested. However, during the nights, you secretly begin creating an off switch for the barrier. You don&#39;t involve anyone else , if you got caught, you didn&#39;t want to drag others down with you.
+
+Soon after, you and Regorn successfully complete the magic cage barrier. You send word of its completion, and by the end of the day, the device is installed around the city. Immediately after, you receive orders to leave, both you and Regorn are to pack your belongings and be out of the city within an hour.
+
+As you are escorted into the carriage, you clutch your bag tightly. Inside, hidden among your belongings, are the off switch, the blueprints, and the letters. Once you arrive at the camp, you wait until nightfall. When the time feels right, you activate the switch, disabling the barrier you and Regorn created.
+
+You don’t have time to process what happens next. You are ripped from your bed, dragged to a tent, and forced to your knees before the same old man who had given the deployment speech.
+
+His expression is grim as he glares down at you. &quot;Do you realize what you have done? You just let a disease escape that city. It will kill every single person it infects.&quot;
+
+Your blood runs cold. There’s no way. You didn’t know. How could you have known? No one told you.
+
+&quot;Why didn’t you tell me?&quot; you demand, your voice shaking.
+
+The old man sighs. &quot;If the person who created this bioweapon had learned that we knew, they would have spread that knowledge elsewhere, beyond our reach. It was safer to contain it rather than risk chasing a ghost.&quot;
+
+He waves his hand, and you are dragged out of the tent. The entire camp stares at you with disgust. No words are spoken, but their expressions say everything—your mistake was not one that could be forgiven.
+
+You gather your things, preparing to leave, when you find Regorn waiting for you outside.
+
+His voice is quiet but firm. &quot;You committed treason against your country. If I were you, I&#39;d flee before the enforcers come for you and your family.&quot;
+
+He pats your shoulder once before walking away.
+
+Heart pounding, you rush home, gathering your family and showing them everything, the letters, the blueprints, the device you created. They are horrified but don’t hesitate. They begin packing immediately.
+
+That night, your family flees to another country.
+
+In the months that follow, rumors reach you, your homeland has fallen into war, and the magical, man-made disease has spread, claiming countless lives.
+
+You live the rest of your life in regret, haunted by the knowledge that you had tried to do the right thing and doomed your people instead.
+[[The End]] </tw-passagedata><tw-passagedata pid="17" name="Join them" tags="" position="525,875" size="100,100">You hesitate, then slowly lower the hammer. “If there’s truly another way… then I want to see it for myself.”
+
+Ambrose&#39;s tension softens. “Then we leave tonight.”
+
+The next few hours are a blur. You pack only what you need and black magic detector item, slipping through the shadows as you follow Ambrose out of the facility. He leads you to a hidden path through the mountains, where others are waiting, runaways like you, defectors who no longer want to be pawns in the Academy’s game.
+
+You travel for days, eventually reaching a hidden stronghold where Oberon and his followers are preparing for the next phase of their rebellion. Their knowledge of magic surpasses anything taught at the Academy, and their vision for the future is both inspiring and terrifying.
+
+As you train alongside them, you begin to understand the full scope of what’s at stake. You see the corruption of the Council, the lies you had been raised to believe, but you also see the destruction your new allies are willing to unleash to achieve their goals.
+
+Now, you wonder if have you truly found freedom, or have you simply traded one master for another? You watch your country&#39;s society be diseased and burn down to the ground. You picked the winning side but why does it feel that you are on losing side? Even long after the war, you wonder what your life would have been if you stayed. This was your burden to carry.
+[[The End]] </tw-passagedata><tw-passagedata pid="18" name="Reject Invitation" tags="" position="650,875" size="100,100">You shake your head, gripping the hammer tightly. “This isn’t the way, Ambrose. Maybe the system is broken, but spreading death and destruction won’t fix it.”
+
+Ambrose’s expression is disappointment and pity. “Then you’re choosing to remain a pawn,” he mutters.
+
+“No, I’m choosing not to become a monster. We swore to do good in the world.”
+
+The room falls silent, the tension divide you two further. Ambrose takes a step back, sizing you up before sighing. “Then I have no choice.”
+
+Before you can react, he throws a device, sending a pulse of magic toward you. The force knocks you back, crashing into the workbench. By the time you regain your footing, Ambrose is gone, the only sign of his presence a shattered window and the hammer still clutched in your hand. Luckly, he did not destroy this device and you ran to instantly report on the events that just occurred.
+
+In the following days, the truth about the rebellion begins to surface. The Academy is on high alert, searching for infiltrators and sympathizers. You report Ambrose’s actions, but guilt lingers, if had you done the right thing? Was there really no other way?
+
+Soon, war breaks out, and you find yourself using device to week out those infected or using black magic. You begin to hold onto the item as if it is only thing keeping you alive. You continue to hold onto the device even after the war ended out of fear, that war was never truly over. You wonder if doing bad for greater good would&#39;ve been worth it? You made your choice and you will take it to your grave.
+[[The End]] </tw-passagedata><tw-passagedata pid="19" name="Find a Cure" tags="" position="900,875" size="100,100">You refuse to accept that burning the wounded is the only solution. There has to be another way.
+
+Despite the risk, you begin experimenting, studying every symptom and magical signature of the disease. You carefully extract samples from those infected, observing how it spreads. Days pass, and exhaustion sets in, but you push forward, desperate to save them.
+
+Then, you feel it.
+
+A sharp numbness spreads through your fingertips as you mix ingredients for a potential antidote. You realize you are infected, in a panic you lock yourself away from everyone else.
+
+You knew this was a possibility, but now it’s real. You are running out of time.
+
+Still, you refuse to stop. With the help of the remaining sages, you administer experimental treatments to the afflicted. Some show signs of slowing petrification, but it’s not enough. The process is still spreading—through them and through you.
+
+One night, as you stare at your shoulder stiff and gray up to your collar bones, you realize you may never be able to cure yourself. But if you can save others, it will be worth it.
+
+Finally, you make a breakthrough. A combination of enchanted herbs and purification spells halts the disease entirely. It is not a cure, but it is a way to stop it from progressing. You felt you had made the right choice even if it cost you ability to feel or move those areas of your body. You are deemed a hero but also criticize due to the time it took you to find a way to stop it. This blame continue long after the war, people deeming you an enemy or a hero. You will never truly know if you are welcomed anywhere.
+[[The End]] </tw-passagedata><tw-passagedata pid="20" name="Title Page" tags="" position="575,0" size="200,200">(align:&quot;==&gt;&lt;==&quot;)[Oberon&#39;s Weapon
+By Nikayla Schermer
+
+[[Start]] ]</tw-passagedata><tw-passagedata pid="21" name="The End" tags="" position="325,50" size="100,100">Didn&#39;t like your ending?
+Try again here: 
+(button: &quot;Title Page&quot;)[(goto: &quot;Title Page&quot;)]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
